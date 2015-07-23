@@ -1,0 +1,34 @@
+//
+//  2014_11_20_微博.pch
+//  2014_11_20_微博
+//
+//  Created by Mac10.9 on 14-11-20.
+//  Copyright (c) 2014年 xiaoxiaobing. All rights reserved.
+// 系统的全局引用
+
+#ifdef __OBJC__
+
+/**
+ *  第三方框架
+ */
+#import"MJRefresh.h"
+#import"MJExtension.h"
+#import"MBProgressHUD+MJ.h"
+
+#import<UIKit/UIKit.h>
+#import"UIView+Help.h"
+#import"UIBarButtonItem+Help.h"
+#import"UIImage+Help.h"
+
+#define iOS8 ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
+#define XXBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0  blue:(b)/255.0  alpha:1]
+
+#define XXBKeywindow [UIApplication sharedApplication].keyWindow
+#define XXBBeginMoreNote @"BeginMore"
+#define XXBBeginNewNote  @"BeginNew"
+#ifdef DEBUG /// 调试阶段
+#define XXBLog(...) NSLog(__VA_ARGS__)
+#else // 发布阶段
+#define IWLog(...)
+#endif
+#endif
